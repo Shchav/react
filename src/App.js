@@ -33,12 +33,22 @@ class Field extends Component {
   }
 }
 
+function WhoAmI(props) {
+  return (
+    <div>
+      <h1>My name is {props.name}, surname - {props.surname}</h1>
+      <a href={props.link}>My profile</a>
+    </div>
+  )
+}
+
 function App() {
   return (
     <div className="App">
       <Header />
       <Field />
       <Btn />
+      <WhoAmI name="John" surname="Smith" link="facebook.com" />
     </div>
   );
 }
